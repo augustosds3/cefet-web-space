@@ -10,13 +10,27 @@ const servidorDasImagens = 'https://fegemo.github.io/cefet-web/images/',
     'philae-collecting.jpg'
   ];
 
-  var i = 0;
+  var n = 0;
 
-  function nextPrev(){
-  	if (i > todasAsImagens.length) {
-  		i=0;
-  		document.getElementById('slide').src = todasAsImagens[i];
-  		i++;
-  	};
+  function next(){
+  	if (n == todasAsImagens.length-1) {
+  		n=0;
+  		document.getElementById('slide').src = servidorDasImagens.concat(todasAsImagens[n]);
+  	} else{
+      document.getElementById('slide').src = servidorDasImagens.concat(todasAsImagens[n+1]);
+     n++;
+    };
   	
+  }
+
+  function previous(){
+    if (n == 0) {
+      n=todasAsImagens.length-1;
+      document.getElementById('slide').src = servidorDasImagens.concat(todasAsImagens[n]);
+
+    } else{
+      document.getElementById('slide').src = servidorDasImagens.concat(todasAsImagens[n-1]);
+      n--;
+    };
+    
   }
