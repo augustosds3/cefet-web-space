@@ -9,3 +9,14 @@ const servidorDasImagens = 'https://fegemo.github.io/cefet-web/images/',
     'philae-67-picture.jpg',
     'philae-collecting.jpg'
   ];
+
+  var i = 0;
+
+  function nextPrev(){
+  	if (i > todasAsImagens.length) {
+  		i=0;
+  		document.getElementById('slide').src = todasAsImagens[i];
+  		i++;
+  	};
+  	
+  }
