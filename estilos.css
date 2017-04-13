@@ -8,6 +8,18 @@ body {
 }
 
 p {
+  white-space: nowrap;
+  height: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+p.expandido {
+  white-space: normal;
+  height: auto;
+}
+
+p {
   text-align: justify;
 }
 
